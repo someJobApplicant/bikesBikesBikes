@@ -19,7 +19,6 @@ public class InvoiceTest extends BaseTest{
         for (Bike bike:bikes.subList(0, 2)){
         	result.addRental(new Rental(Rental.Type.HOUR, bike, 2));
         }
-        Assert.assertEquals("Total should be $20", 20.0, result.getTotal(), 0.01);
-
+        Assert.assertEquals("Total should be $20", 20.0, result.getTotal(), getDoubleErrorTolerance());
 	}
 }
